@@ -1,0 +1,47 @@
+<%- include('header'); -%>
+
+<body class="container text-center">
+  <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+
+    <form action="/" method="post" class="form-signin" style="margin-top: 3em;">
+
+      <h1 class="h3 mb-3 font-weight-normal" style="background-color: #6E7C7C;width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:center" >Roster Display</h1>
+      <label for="inputEmail" class="sr-only">Payroll Number</label>
+      <input type="number" name="PRN" placeholder="PRN" class="form-control top" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+      <label for="month" class="sr-only">Month</label>
+      <select id="month" name="month" placeholder ="Month" class="form-control middle" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+        <option selected>Select a Month..</option>
+        <option >January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      <label for="year" class="sr-only">Year</label>
+      <select id="year" name="year" class="form-control bottom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+        <option selected>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+      </select>
+      <button type="submit" name="button" class="btn btn-md btn-secondary" style="margin-top: 2em; margin-left:auto;margin-right:auto;align:center">Go to Roster</button>
+      </form>
+  </div>
+
+  <!-- javascripts -->
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

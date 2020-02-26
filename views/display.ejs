@@ -1,0 +1,71 @@
+<%- include('header'); -%>
+
+  <body class="container">
+    <div>
+      <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+
+        <form action="/" method="post" class="form-inline" style="margin-top: 1em;">
+
+          <label for="inputEmail" class="sr-only">Payroll Number</label>
+          <input type="number" name="PRN" placeholder="PRN" class="form-control top" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+          <label for="month" class="sr-only">Month</label>
+          <select id="month" name="month" placeholder ="Month" class="form-control middle" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+            <option selected>Select a Month..</option>
+            <option >January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <label for="year" class="sr-only">Year</label>
+          <select id="year" name="year" class="form-control bottom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 300px;margin-top: 1em;margin-left:auto;margin-right:auto;align:cente">
+            <option selected>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+          <button type="submit" name="button" class="btn btn-md btn-secondary" style="margin-top: 1em; margin-left:auto;margin-right:auto">Go to Roster</button>
+          </form>
+      </div>
+    </div>
+    <div >
+      <p>Hello!, <em><%= newPRN %> !</em> </p>
+    </div>
+    <div>
+      <table class="table table-sm table-striped" >
+         <thead class="thead-dark">
+             <tr>
+                 <th scope="col">Date</th>
+                 <th scope="col">Code</th>
+                 <th scope="col">From</th>
+                 <th scope="col">To</th>
+                 <th scope="col">Function</th>
+             </tr>
+         </thead>
+          <tbody>
+          <% ros.forEach(function (prn) { %>
+             <tr>
+                 <td scope="row"><%= new Date(prn.Date).toLocaleDateString('en-US', {year: 'numeric', month: 'short' , day : '2-digit'}) %></td>
+                 <td scope="row"><%= prn.Code %></td>
+                 <td scope="row"><%= prn.From %></td>
+                 <td scope="row"><%= prn.To %></td>
+                 <td scope="row"><%= prn.Function %></td>
+             </tr>
+          <% }) %>
+          </tbody>
+     </table>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
